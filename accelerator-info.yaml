@@ -1,0 +1,29 @@
+id: 563609a9-b517-4218-b4eb-f1e3315381b4
+timestamp: 2023-11-23T10:13:21Z
+username: maximilianfuhrich
+source: INTELLIJ
+accelerator:
+  name: tanzu-java-web-app
+  source:
+    image: harbor.dieunkrauts.de/tap/tap-packages@sha256:580460d8fb05c229ed34bf348592596b1218540975ac9982666d5fd3f7fcf00e
+fragments:
+  - name: build-wrapper-maven
+    source:
+      image: harbor.dieunkrauts.de/tap/tap-packages@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+  - name: java-version
+    source:
+      image: harbor.dieunkrauts.de/tap/tap-packages@sha256:fa976ccf1609cb69e74a0162f0f49581fd0d393003e2fbe5d54d12eae62b4ff9
+  - name: tap-workload
+    source:
+      image: harbor.dieunkrauts.de/tap/tap-packages@sha256:d9c7d8d322f0740666ba7c752a9174d1eb66274338c4f0e211edb1d448104c2a
+  - name: build-wrapper-gradle
+    source:
+      image: harbor.dieunkrauts.de/tap/tap-packages@sha256:5480259d6a29a11f0cc482cd304501d74ccd89dd7207f2d639d6f0d8eedc3bf8
+options:
+  buildTool: maven
+  ide: intellij
+  includeBuildToolWrapper: true
+  javaVersion: 17
+  nativeBuild: false
+  projectName: tanzu-java-web-app-git-mf1
+  springBootVersion: 3.1
