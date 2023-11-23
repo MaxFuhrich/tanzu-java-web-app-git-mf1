@@ -1,10 +1,10 @@
+allow_k8s_contexts('tap-cluster')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
 
 k8s_custom_deploy(
     'tanzu-java-web-app-git-mf1',
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --update-strategy replace --debug --live-update" +
-               " --local-path " + LOCAL_PATH +
                " --namespace " + NAMESPACE +
                " --yes --output yaml",
     delete_cmd="tanzu apps workload delete -f config/workload.yaml --namespace " + NAMESPACE + " --yes",
