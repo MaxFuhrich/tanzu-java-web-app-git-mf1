@@ -20,4 +20,4 @@ spec:
     git:
       url: https://github.com/MaxFuhrich/tanzu-java-web-app-git-mf1
       ref:
-        branch: main
+        branch: master
